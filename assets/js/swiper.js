@@ -37,7 +37,7 @@ const programsSwiper = new Swiper('.programs-swiper', {
     spaceBetween: 20,
 
     pagination: {
-        el: '.swiper-pagination',
+        el: '.programs-pagination',
         clickable: true,
     },
 
@@ -66,7 +66,7 @@ const aboutSwiper = new Swiper('.about-us-swiper', {
     spaceBetween: 20,
 
     pagination: {
-        el: '.swiper-pagination',
+        el: '.programs-pagination',
         clickable: true,
     },
 
@@ -86,6 +86,35 @@ const aboutSwiper = new Swiper('.about-us-swiper', {
 
     }
 
+
+
+});
+
+
+const steamingSwiper = new Swiper('.steaming-swiper', {
+    slidesPerView: 3,
+    spaceBetween: 20,
+
+    pagination: {
+        el: '.steaming-pagination',
+        clickable: true,
+    },
+
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    breakpoints: {
+        320: {slidesPerView: 1,},
+        540: {slidesPerView: 1,},
+        576: {slidesPerView: 1.2},
+        779: {slidesPerView: 1.5},
+        954: {slidesPerView: 2},
+        1200: {slidesPerView: 2},
+        1315: {slidesPerView: 3},
+
+    }
 
 
 });
