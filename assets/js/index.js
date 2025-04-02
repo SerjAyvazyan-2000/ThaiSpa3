@@ -227,28 +227,36 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// Получаем элементы
+
 const video = document.getElementById('videoElement');
 const playButton = document.getElementById('playButton');
 const videoFon = document.getElementById('videoFon');
 
-// При клике на кнопку play
-playButton.addEventListener('click', () => {
-    // Скрываем фон и кнопку play
-    videoFon.style.display = 'none';
-    playButton.style.display = 'none';
+let isPlaying = false; // Флаг состояния видео
 
-    // Показываем видео
-    video.style.display = 'block';
-    video.play(); // Начинаем воспроизведение видео
-});
+const toggleVideo = () => {
+    if (!isPlaying) {
+        video.play();
+        videoFon.style.display = 'none';
+        playButton.style.display = 'none';
+    } else {
+        video.pause();
+        videoFon.style.display = 'block';
+        playButton.style.display = 'block';
+    }
+    isPlaying = !isPlaying;
+};
 
-// Когда видео завершится
-video.addEventListener('ended', () => {
-    // Показываем фон и кнопку play снова
+videoFon.addEventListener('click', toggleVideo);
+playButton.addEventListener('click', toggleVideo);
+
+video.addEventListener('click', () => {
     videoFon.style.display = 'block';
     playButton.style.display = 'block';
-
-    // Прячем видео
-    video.style.display = 'none';
+    isPlaying = false;
+});
+video.addEventListener('ended', () => {
+    videoFon.style.display = 'block';
+    playButton.style.display = 'block';
+    isPlaying = false;
 });
