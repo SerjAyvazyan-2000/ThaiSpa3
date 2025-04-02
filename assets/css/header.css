@@ -1,0 +1,288 @@
+
+
+.header{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
+
+}
+
+.menu{
+    position: absolute;
+    max-width: 300px;
+    z-index: -1;
+    min-height: 306px;
+    padding: 10px;
+    width: 100%;
+    right: -70px;
+    top: -500%;
+    transition: .3s;
+
+
+}
+
+.menu.active{
+    top: 0;
+
+}
+
+.menu-bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.menu-list{
+    margin-top: 76px;
+    align-items: center;
+    gap: 10px;
+}
+.menu-link{
+    font-family: 'Vetrino',sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    color: var(--white2);
+    transition: .3s;
+    text-align: center;
+
+}
+.menu-link:hover{
+    text-decoration: underline;
+    opacity: .8;
+}
+
+.header-body{
+    padding: 20px 0 ;
+    justify-content: space-between;
+    gap: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.header-contacts{
+    gap: 10px;
+}
+
+
+.header-contact{
+    max-width: 20px;
+    height: 20px;
+    width: 100%;
+    transition: .3s;
+}
+
+.header-contact:hover{
+    transform: scale(1.1);
+}
+
+.contact-number{
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--white2);
+    transition: .3s;
+
+}
+
+
+.contact-number:hover{
+    text-decoration: underline;
+    opacity: .7;
+}
+
+.burger-box{
+    padding: 10px 30px;
+    border: 1px solid var(--white);
+    border-radius: 10px;
+    gap: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+.burger-box.active{
+    border: none;
+
+}
+
+.burger-box:hover{
+    background: var(--black);
+}
+.burger-text{
+    font-family: 'Vetrino',sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: var(--white2);
+
+}
+
+.burger {
+    width: 20px;
+    height: 10.5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.burger span {
+    width: 100%;
+    display: block;
+    height: 1px;
+    background: var(--white);
+    transition: .3s;
+    border-radius: 5px;
+
+}
+
+.burger::after {
+    width: 100%;
+    content: '';
+    display: block;
+    height: 1px;
+    background: var(--white);
+    transition: .3s;
+    border-radius: 5px;
+
+}
+
+.burger::before {
+    width: 100%;
+    content: '';
+    display: block;
+    height: 1px;
+    background: var(--white);
+    transition: .3s;
+    border-radius: 5px;
+
+}
+.burger.active {
+    position: relative;
+    transition: .3s;
+    z-index: 3;
+}
+
+
+.burger.active span {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.burger.active::before {
+    transform: rotate(-45deg);
+    top: 4px;
+    position: relative;
+    background: var(--white);
+
+
+}
+
+
+.burger.active::after {
+    transform: rotate(45deg);
+    bottom: 6px;
+    position: relative;
+    background: var(--white);
+
+}
+
+.header-logo{
+    display: none;
+}
+.header-contacts-mobile{
+    display: none;
+}
+
+
+@media (max-width: 1450px) {
+    .menu{
+        right: 0;
+
+    }
+
+}
+
+@media (max-width: 1400px) {
+
+}
+
+@media (max-width: 1200px) {
+
+
+}
+
+@media (max-width: 992px) {
+
+
+}
+
+@media (max-width: 768px) {
+
+
+}
+
+
+@media (max-width: 576px) {
+    .header-logo {
+        display: flex;
+    }
+    .header-contacts{
+        display: none;
+    }
+    .header-contacts-mobile{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+    .menu-list{
+        margin-top: 36px;
+    }
+    .burger-text{
+        display: none;
+    }
+    .burger-box:hover{
+        background: none;
+    }
+
+    .menu-link {
+        font-size: 13px;
+        line-height: normal;
+
+    }
+    .menu-list{
+        gap: 5px;
+    }
+
+    .header-body{
+        padding: 10px 0 ;
+    }
+    .menu{
+        max-width: 250px;
+        min-height: 260px;
+    }
+    .burger-box {
+        padding: 12px 30px;
+        border: 1px solid var(--white);
+        border-radius: 10px;
+        gap: 10px;
+        cursor: pointer;
+        transition: .3s;
+    }
+}
+
+@media (max-width: 400px) {
+
+
+}

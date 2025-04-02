@@ -1,0 +1,15 @@
+
+
+@font-face {
+    font-family:'Vetrino';
+    src: url('Vetrino.woff') format('woff'),
+    local('Vetrino.woff');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Snell Roundhand';
+    src: url('Snell-Roundhand-Regular.woff') format('woff'),
+    local('Snell-Roundhand-Regular.woff.woff');
+    font-weight: 500;
+}
