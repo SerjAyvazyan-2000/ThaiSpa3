@@ -66,7 +66,7 @@ const aboutSwiper = new Swiper('.about-us-swiper', {
     spaceBetween: 20,
 
     pagination: {
-        el: '.programs-pagination',
+        el: '.gallery-pagination',
         clickable: true,
     },
 
